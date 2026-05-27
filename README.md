@@ -1,147 +1,61 @@
-# 📜 Tolkapy WebApp
+# Tolkapy - aka TamilRulepy
 
-🚀 **Tolkapy WebApp** is an interactive Tamil grammar and Tolkappiyam analysis platform built using Python and Streamlit. The project focuses on computational analysis, visualization, and educational exploration of classical Tamil grammatical structures.
+Tolkapy is a python package known earlier as tamilrulepy 
+which provides functions based on tolkapiyam rules to validate tamil words.
 
----
+## பதிப்பு V0.0.2
 
-## 🌐 Live Demo
+## About
 
-https://tolkapywebappnewver1.streamlit.app/
+Code Repository : https://gitlab.com/kachilug/tamilrulepy
+Issues : https://gitlab.com/kachilug/tamilrulepy/-/issues
 
----
+தமிழ் விக்கிமூலத்தில் எழுத்துணிரியாக்கம்(OCR) செய்த தரவுகளைத் துப்புரவு செய்ய, இக்கூட்டுமுயற்சி மேற்கொள்ளப்படுகிறது.
 
-## 🌟 Features
+தொல்காப்பியரின் விதிகளை முழுமையாக நிரலாக்கம் செய்தால் எழுத்துணரியாக்கப் பிழைகளைக் களைய முடியும்.
 
-### 🧩 Meymayakkam Analysis
-- Analyze Tamil consonant assimilation rules (மெய்ம்மயக்கம்)
-- Supports multiple Tolkappiyam phonological patterns
-- Rule-based grammar engine
+Tamil is one of the still existing classical language. 
+It has been used around 10 million around world. so we
+planed to develop this library for help helping tamil
+application.  
 
-### 🏁 Mozhi Mudhal Analysis
-- Detect valid Tamil word beginnings
-- உயிர் / உயிர்மெய் வரிசை validation
+## Documentation
 
-### 🔚 Mozhi Iruthi Analysis
-- Analyze Tamil word endings
-- Identify:
-  - உயிர்
-  - மெல்லினம்
-  - இடையினம்
-  - அளபெடை
-  - சுட்டு
-  - வினா
+தமிழ் [English](https://tamilrulepy.readthedocs.io/en/latest/)
 
-### 🔗 Punarchi (Sandhi) Processing
-- Two-word and three-word sandhi generation
-- Tamil phonological joining engine
+## ஆவணங்களை புதுப்பிக்க
 
-### 📊 Data Visualization
-- Interactive grammar flowcharts
-- Meymayakkam decision trees
-- Tamil phonology graph visualization
-- Frequency histograms
-- Syntax tree representations
+```bash 
+make html
+```
 
----
-
-## 🧠 Research Objectives
-
-This project aims to:
-
-- Digitally represent Tolkappiyam grammar rules
-- Support Tamil NLP research
-- Help students learn grammar visually
-- Build computational linguistic resources for Tamil
-- Create educational grammar visualizations
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Streamlit
-- Plotly
-- Graphviz
-- NetworkX
-- Pandas
-- Matplotlib
-- Pyvis
-
----
-
-## 📦 Installation
-
-### Clone the Repository
+## ஆவணம் தயாரிப்பு சூழல் அமைத்தல்
 
 ```bash
-git clone https://github.com/yourusername/tolkapy_webapp_new_ver1.git
-cd tolkapy_webapp_new_ver1
-Install Dependencies
+cd [root folder]
+
+python3 -m venv tamilrulepy-venv
+
+source tamilrulepy-venv/bin/activate
+
 pip install -r requirements.txt
-Run the Application
-streamlit run app.py
-📁 Project Structure
-tolkapy_webapp_new_ver1/
-│
-├── app.py
-├── requirements.txt
-├── images/
-├── tamilrulepy/
-├── README.md
-└── assets/
-🎓 Educational Importance
 
-The application is designed to explain complex Tamil grammatical structures in a child-friendly and research-oriented visual format.
+cd source --> rst கோப்புகளை திருத்த 
+cd tamilrulepy --> py கோப்புகளில் ஆவணப்படுத்த """" doc strings ஐ""" பயன்படுத்த
 
-It bridges:
+(எ.க) vidhikal.rst ஐ பார்க்க
+```
 
-Traditional Tamil grammar
-Computational linguistics
-Artificial Intelligence
-Digital humanities
-🌍 Research & Development
+### தொடுப்புகள்
 
-This project contributes toward:
+[சிபினிக்ஸ் ஆவணம் தயாரிப்பான் பயன்பாட்டு குறிப்பு](https://eikonomega.medium.com/getting-started-with-sphinx-autodoc-part-1-2cebbbca5365)
 
-Tamil NLP
-Grammar AI systems
-Linguistic visualization
-Tolkappiyam digitization
-Educational technology
-👨‍🏫 Authors
-மொழிவல்லுநர்
+## For Building
 
-முனைவர் சத்தியராசு தங்கச்சாமி
+```bash
+uv build --wheel
+```
 
-தொழில்நுட்ப குழு
-சு. பூபாலன்
-மு. வருண்
-குழுவினர்
-📜 License
+## Contact
 
-This project is licensed under the MIT License.
-
-🤝 Contributions
-
-Contributions, issues, and feature requests are welcome!
-
-⭐ Future Plans
-AI-based grammar correction
-Tamil LLM integration
-Speech-based phonology analysis
-Interactive grammar tutoring
-Advanced syntax visualization
-📚 Related Areas
-Tamil NLP
-Computational Linguistics
-Tolkappiyam
-Digital Humanities
-Educational Technology
-Language AI
-❤️ Acknowledgement
-
-Inspired by the rich grammatical tradition of ancient Tamil and the vision of bringing classical linguistic knowledge into the digital era.
-
-
-:contentReference[oaicite:0]{index=0}  
-:contentReference[oaicite:1]{index=1}
+Community (Telegram) : https://t.me/+Flv200UT_Lg0ODk1

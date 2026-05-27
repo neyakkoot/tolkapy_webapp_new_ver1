@@ -1,0 +1,27 @@
+image: python:3.11
+
+stages:
+  - lint
+  - test
+
+ruff:
+  stage: lint
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  before_script:
+    - pip install ruff
+  script:
+    - ruff check tamilrulepy/
+
+coverage:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  before_script:
+    - pip install pytest pytest-cov
+    - pip install -e .
+    - pip install Open-Tamil
+    - pip install tamilstring
+  script:
+    - pytest --cov=src --cov-report=term-missing
+  coverage: '/TOTAL.*\s+(\d+%)$/'

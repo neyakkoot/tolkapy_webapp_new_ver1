@@ -1,0 +1,26 @@
+repos:
+  # -----------------------------------
+  # Ruff: linting + formatting
+  # -----------------------------------
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.10   # pin a version, update periodically
+    hooks:
+      # Lint (includes unused imports, unused functions, etc.)
+      - id: ruff
+        args:
+          - --fix
+          - --exit-non-zero-on-fix
+
+      # Formatter (ruff format)
+      - id: ruff-format
+
+  # -----------------------------------
+  # General sanity checks
+  # -----------------------------------
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-added-large-files

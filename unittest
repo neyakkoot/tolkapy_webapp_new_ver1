@@ -1,0 +1,27 @@
+#!/bin/bash
+
+TEST=${1:-ALL}  # If argument provided, use it; else run all tests
+
+echo "Unit testing started"
+
+export PYTHONPATH=$(pwd):$PYTHONPATH
+TEST_DIRECTORY=./tests
+cd "$TEST_DIRECTORY" || exit 1
+
+rm -f success.txt failed.txt
+touch success.txt failed.txt
+
+if [ "$TEST" = "ALL" ]; then
+    TESTS=(*.py)
+else
+    TESTS=($TEST)
+fi
+
+for testcase in "${TESTS[@]}"; do
+    echo "Running Test case: $testcase"
+    if python3 -m unittest "$testcase"; then
+        echo "$testcase" >> success.txt
+    else
+        echo "$testcase" >> failed.txt
+    fi
+done
